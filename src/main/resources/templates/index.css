@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
+}
+#formclass{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    width: auto;
+    background-color: beige;
+}
+.btn{
+    border-radius: 3px;
+    border-width: 1px;
+    align-items: center;
+    margin-left: 65px;
+    padding: 5px;
+    font-family:'Times New Roman', Times, serif;
+}
