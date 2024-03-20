@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class LoginApplicationTests {
-	private WebDriver driver;
+    private WebDriver driver;
 
     @BeforeEach
     public void setUp(){
@@ -24,18 +24,18 @@ class LoginApplicationTests {
     public void tearDown(){
         driver.quit();
     }
-	@Test
-	public void testLoginSuccess(){
+    @Test
+    public void testLoginSuccess(){
 
-		WebElement usernameField = driver.findElement(By.id("username"));
+        WebElement usernameField = driver.findElement(By.id("username"));
         WebElement passwordField = driver.findElement(By.id("password"));
         WebElement loginButton = driver.findElement(By.id("login"));
 
-		usernameField.sendKeys("Shaun");
+        usernameField.sendKeys("Shaun");
         passwordField.sendKeys("licet");
         loginButton.click();
-	}
-	@Test
+    }
+    @Test
     public void testLoginFailure(){
         WebElement usernameField = driver.findElement(By.id("username"));
         WebElement passwordField = driver.findElement(By.id("password"));
@@ -45,6 +45,4 @@ class LoginApplicationTests {
         passwordField.sendKeys("wrongpassword");
         loginButton.click();
     }
-	
-
 }

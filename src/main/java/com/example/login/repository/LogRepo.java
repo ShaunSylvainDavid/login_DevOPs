@@ -9,4 +9,6 @@ import com.example.login.domain.Login;
 public interface LogRepo extends JpaRepository<Login,String>{
     
     Login findByUsernameAndPassword(String username, String password);
+    @SuppressWarnings("unchecked")
+    Login save(Login user);
 }

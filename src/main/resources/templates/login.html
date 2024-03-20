@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Login Form</title>
+</head>
+<body>
+  <div id="formclass">
+  <h2>Login Form</h2>
+  <form action="#" th:action="@{/log}" method="post">
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username" required><br><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+    <br>
+    <input type="submit" value="Login"  id="login" class="btn"><br>
+  </form>
+  <a href="/register"><button>Register if No Account</button></a>
+</div>
+</body>
+</html>
