@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.login.domain.Login;
 import com.example.login.service.LogService;
+import com.example.login.service.RegService;
 
 @Controller
 public class LogController {
@@ -40,6 +41,33 @@ public class LogController {
     @GetMapping("/disp")
     public String display() {
         return "disp";
+    }
+
+    @Autowired
+    private RegService rservice;
+ 
+    @GetMapping("/register")
+    public String api2()
+    {
+        return "register";
+    }
+ 
+    @PostMapping("/reg")
+    public String register(@ModelAttribute("user") Login user) {
+ 
+        Login oauthUser = rservice.reg(user.getUsername(), user.getPassword());
+ 
+        System.out.print(oauthUser);
+        if (Objects.nonNull(oauthUser)) {
+            return "redirect:/display";
+        } else {
+            return "redirect:/";
+        }
+    }
+ 
+    @GetMapping("/display")
+    public String display2() {
+        return "display";
     }
 }
 
