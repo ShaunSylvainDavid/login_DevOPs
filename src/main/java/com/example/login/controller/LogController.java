@@ -22,7 +22,7 @@ public class LogController {
     public String api()
     {
  
-        return "login1";
+        return "login2";
     }
  
     @PostMapping("/log")
